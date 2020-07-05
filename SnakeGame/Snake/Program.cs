@@ -1,4 +1,4 @@
-﻿using System;
+﻿using Snake.Game;
 
 namespace Snake
 {
@@ -6,7 +6,12 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            double frameRate = 1000 / 5.0;
+
+            IGame game = new Game.Game(frameRate);
+
+            game.Update();
         }
     }
 }
+
