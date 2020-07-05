@@ -24,8 +24,11 @@ namespace Snake
         public void SetNewPosition()
         {
             Random random = new Random();
+            var playgroundWidht = Console.WindowWidth;
+            var playgroundHeight = Console.WindowHeight;
 
-            _coordinates = new Coords(random.Next(1, 20), random.Next(1, 20));
+
+            _coordinates = new Coords(random.Next(1, playgroundWidht), random.Next(1, playgroundHeight));
         }
     }
 }

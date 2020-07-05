@@ -10,5 +10,7 @@ namespace Snake
         void Eat();
         bool GameOver();
         bool IsOverlapping(IGameObject gameObject);
+        bool HitBorder();
+        int GetLength();
     }
 }

@@ -12,5 +12,16 @@
 
         public int X { get; set; }
         public int Y { get; set; }
+
+        public static bool operator !=(Coords lhs, Coords rhs)
+        {
+            return (lhs.X != rhs.X && lhs.Y != rhs.Y);
+        }
+
+        public static bool operator ==(Coords lhs, Coords rhs)
+        {
+            return (lhs.X == rhs.X && lhs.Y == rhs.Y);
+
+        }
     }
 }
