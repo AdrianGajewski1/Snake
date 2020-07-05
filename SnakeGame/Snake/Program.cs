@@ -1,4 +1,5 @@
 ﻿using Snake.Game;
+using System;
 
 namespace Snake
 {
@@ -6,7 +7,9 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            double frameRate = 1000 / 5.0;
+            Console.CursorVisible = false;
+            
+            double frameRate = 1000 / 8;
 
             IGame game = new Game.Game(frameRate);
 

@@ -19,12 +19,12 @@ namespace Snake.Game
         {
             _frameRate = frameRate;
         }
-
         public void Update()
         {
             while(_gameOver == false)
             {
-                if(Console.KeyAvailable)
+
+                if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo input = Console.ReadKey();
                     switch (input.Key)
@@ -48,6 +48,7 @@ namespace Snake.Game
                 {
                     snake.Draw();
                     snake.Move(snakeDirection);
+                    
                     target.Draw();
 
                     if (snake.IsOverlapping(target))
@@ -59,6 +60,7 @@ namespace Snake.Game
                     if (snake.GameOver() || snake.HitBorder())
                         _gameOver = true;
 
+
                     _lastDate = DateTime.Now;
                 }
                  
@@ -67,8 +69,7 @@ namespace Snake.Game
             if(_gameOver == true)
             {
                 Console.Clear();
-                Console.WriteLine("Game Over");
-                Console.ReadKey();
+                Console.WriteLine($"Game Over, Score: {snake.GetLength()}");
             }
         }
     }
